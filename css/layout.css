@@ -1,0 +1,66 @@
+/* ---- App Container ---- */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ---- Sidebar: hidden on mobile ---- */
+.sidebar {
+  display: none;
+}
+
+
+
+
+
+/* .bottom-nav {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--bottom-nav-height);
+  background: var(--white);
+  border-top: 1px solid var(--border-color);
+  z-index: 100;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bottom-nav .nav-item {
+  color: var(--text-gray);
+  font-size: 22px;
+  padding: 12px;
+}
+
+.bottom-nav .nav-item.active {
+  color: var(--primary);
+} */
+
+
+/* ================= TABLET — min-width: 768px ================= */
+@media (min-width: 768px) {
+
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    width: var(--sidebar-collapsed);
+    background-color: var(--white);
+    border-right: 1px solid var(--border-color);
+    position: fixed;
+    height: 100vh;
+    z-index: 100;
+    transition: width 0.3s ease;
+  }
+
+}
+
+/* ================= DESKTOP — min-width: 1024px ================= */
+@media (min-width: 1024px) {
+
+  /* Full sidebar */
+  .sidebar {
+    width: var(--sidebar-width);
+  }
+
+}

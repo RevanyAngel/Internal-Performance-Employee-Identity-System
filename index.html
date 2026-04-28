@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>educativa.id — Dashboard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <div class="app-container">
+    
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-icon">
+            <img class="educativa" src="assets/icons/logo-ducativa.png">
+            <img class="tulisan" src="assets/icons/logo-tulisan-educativa.png">
+        </div>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <ul class="nav-list">
+          <li class="list active nav-item" data-index="0">
+              <a class="sidebar-component" href="#">
+                  <span class="icon"><img src="assets/icons/nav-dashboard-active.png" data-active="assets/icons/nav-dashboard-active.png" data-inactive="assets/icons/nav-dashboard.png"></span>
+                  <span class="text">Dashboard</span>
+              </a>
+          </li>
+          <li class="list nav-item" data-index="1">
+              <a class="sidebar-component" href="#">
+                  <span class="icon"><img src="assets/icons/nav-kpi.png" data-active="assets/icons/nav-kpi-active.png" data-inactive="assets/icons/nav-kpi.png"></span>
+                  <span class="text">KPI Tracker</span>
+              </a>
+          </li>
+          <li class="list nav-item" data-index="2">
+              <a class="sidebar-component" href="#">
+                  <span class="icon"><img src="assets/icons/nav-attendance.png" data-active="assets/icons/nav-attendance-active.png" data-inactive="assets/icons/nav-attendance.png"></span>
+                  <span class="text">Attendance</span>
+              </a>
+          </li>
+          <li class="list nav-item" data-index="3">
+              <a class="sidebar-component" href="#">
+                  <span class="icon"><img src="assets/icons/nav-profile.png" data-active="assets/icons/nav-profile-active.png" data-inactive="assets/icons/nav-profile.png"></span>
+                  <span class="text">Profile</span>
+              </a>
+          </li>
+        </ul>
+        <!-- <a href="#" class="nav-item active">
+          <img src="assets/icons/nav-dashboard-active.png" data-active="assets/icons/nav-dashboard-active.png" data-inactive="assets/icons/nav-dashboard.png">
+          <span>Dashboard</span>
+        </a> -->
+        <!-- <a href="#" class="nav-item active">
+            <img src="assets/icons/nav-dashboard-active.png" data-active="assets/icons/nav-dashboard-active.png" data-inactive="assets/icons/nav-dashboard.png">
+            <span class="text">Dashboard</span>
+        </a>
+        <a href="#" class="nav-item">
+          <img src="assets/icons/nav-kpi.png" data-active="assets/icons/nav-kpi-active.png" data-inactive="assets/icons/nav-kpi.png" alt="KPI Tracker">
+          <span>KPI Tracker</span>
+        </a>
+        <a href="#" class="nav-item">
+          <img src="assets/icons/nav-attendance.png" data-active="assets/icons/nav-attendance-active.png" data-inactive="assets/icons/nav-attendance.png" alt="Attendance">
+          <span>Attendance</span>
+        </a>
+        <a href="#" class="nav-item">
+          <img src="assets/icons/nav-profile.png" data-active="assets/icons/nav-profile-active.png" data-inactive="assets/icons/nav-profile.png" alt="Profile">
+          <span>Profile</span>
+        </a> -->
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-profile">
+          <img src="assets/icons/avatar-1.png" alt="User" class="avatar">
+          <div class="user-info">
+            <h4>Herlina Adinda</h4>
+            <p>Graphic Design</p>
+          </div>
+          <button class="logout-btn"><img src="assets/icons/logout.png" alt="Logout"></button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- <nav class="bottom-nav">
+      <a href="#" class="nav-item active"><img src="assets/icons/nav-dashboard-active.png" alt="Dashboard"></a>
+      <a href="#" class="nav-item"><img src="assets/icons/nav-kpi.png" alt="KPI Tracker"></a>
+      <a href="#" class="nav-item"><img src="assets/icons/nav-attendance.png" alt="Attendance"></a>
+      <a href="#" class="nav-item"><img src="assets/icons/nav-profile.png" alt="Profile"></a>
+    </nav> -->
+    <nav class="container-bottom">
+      <div class="bottom-nav">
+        <ul>
+          <li class="list active" data-index="0">
+              <a href="#">
+                  <span class="icon"><img src="assets/icons/nav-dashboard-active.png" data-active="assets/icons/nav-dashboard-active.png" data-inactive="assets/icons/nav-dashboard.png"></span>
+                  <span class="text">Dashboard</span>
+              </a>
+          </li>
+          <li class="list" data-index="1">
+              <a href="#">
+                  <span class="icon"><img src="assets/icons/nav-kpi.png" data-active="assets/icons/nav-kpi-active.png" data-inactive="assets/icons/nav-kpi.png"></span>
+                  <span class="text">KPI Tracker</span>
+              </a>
+          </li>
+          <li class="list" data-index="2">
+              <a href="#">
+                  <span class="icon"><img src="assets/icons/nav-attendance.png" data-active="assets/icons/nav-attendance-active.png" data-inactive="assets/icons/nav-attendance.png"></span>
+                  <span class="text">Attendance</span>
+              </a>
+          </li>
+          <li class="list" data-index="3">
+              <a href="#">
+                  <span class="icon"><img src="assets/icons/nav-profile.png" data-active="assets/icons/nav-profile-active.png" data-inactive="assets/icons/nav-profile.png"></span>
+                  <span class="text">Profile</span>
+              </a>
+          </li>
+          
+          <div class="indicator">
+              <div class="indicator-inner"></div>
+          </div>
+        </ul>
+      </div>
+      
+    </nav>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/navigation.js"></script>
+</body>
+</html>

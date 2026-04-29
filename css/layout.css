@@ -2,6 +2,7 @@
 .app-container {
   display: flex;
   min-height: 100vh;
+  width: 100vw;
 }
 
 /* ---- Sidebar: hidden on mobile ---- */
@@ -16,23 +17,30 @@
   align-items: center;
 }
 
+.main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 /* === HEADER ==== */
-.header {
+/* .header {
   display: flex;
   flex: 1;
   width: 100%;
   background-color: var(--white);
   border-bottom: 1px solid var(--border-color);
-}
+} */
 
 /* ==== MAIN CONTENT ==== */
-.main-content {
+/* .main-content {
   flex: 1;
   width: 100%;
   margin-left: 0;
   display: flex;
   flex-direction: column;
-}
+  background-color: blue;
+} */
 
 
 /* ================= TABLET — min-width: 768px ================= */
@@ -41,15 +49,22 @@
   .sidebar {
     display: flex;
     flex-direction: column;
+    height: 100vh;
     width: var(--sidebar-collapsed);
     background-color: var(--white);
     border-right: 1px solid var(--border-color);
     position: fixed;
-    height: 100vh;
     z-index: 100;
     transition: width 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   }
+
+  .main-content {
+    width: 88vw;
+    margin-left: auto;
+  }
+
+  
 
 }
 
@@ -59,6 +74,11 @@
   /* Full sidebar */
   .sidebar {
     width: var(--sidebar-width);
+  }
+
+  .main-content {
+    width: 85vw;
+    margin-left: auto;
   }
 
 }

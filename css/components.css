@@ -184,29 +184,45 @@
     display: none;
 }
 
-/* ---ISI KONTEN DASHBOARD---- */
+/* =========== ISI KONTEN DASHBOARD MOBILE ===========  */
 /* ---Banner Dashboard---- */
 .banner-card {
-  background: linear-gradient(135deg, #ffffff 60%, var(--primary-bg) 100%);
-  border-radius: 16px;
+  background: 
+    radial-gradient(circle at 20% -20%, rgba(0, 128, 128, 0.1), transparent 10%),
+    radial-gradient(circle at 100% 80%, rgba(0, 128, 128, 0.15), transparent 40%),
+    radial-gradient(circle at 40% 170%, rgba(0, 128, 128, 0.3), transparent 50%);
+  border-radius: 26px;
   padding: 24px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
-  border: 1px solid var(--border-color);
+  border: 5px solid var(--white);
+  margin: 18px;
 }
 
-.banner-content h2 { color: var(--primary); font-size: 22px; margin-bottom: 8px; }
-.banner-content p  { color: var(--text-gray); font-size: 15px; }
+.banner-content h2 { 
+    color: var(--primary); 
+    font-size: 1.2rem; 
+    margin-bottom: 8px; 
+    font-weight: 800;
+    text-align: start;
+}
+
+.banner-content p  { 
+    color: var(--primary); 
+    font-size: .65rem; 
+    font-weight: 500;
+    text-align: start;
+}
 
 .banner-illustration img {
     width: 100%;
-    max-width: 500px;
-    padding-right: 2rem;
-  }
+    max-width: 300px;
+}
+
+
 
 
 /* ================= TABLET — min-width: 768px ================= */
@@ -345,6 +361,21 @@
         font-weight: 600;
     }
 
+    /* ====== Banner Tablet ====== */
+
+    .banner-card {
+        margin: 1.8rem;
+        height: 15rem;
+    }
+
+    .banner-content h2 {
+        font-size: 2rem;
+    }
+
+    .banner-content p {
+        font-size: 1.2rem;
+    }
+
 }
 
 /* ================= DESKTOP — min-width: 1024px ================= */
@@ -442,6 +473,8 @@
         margin: 5px;
     }
 
+
+
     /* ================== HEADER DESKTOP ================== */
     .top-header {
         width: 85vw;
@@ -452,5 +485,21 @@
     .top-header h1 {
         font-size: 1.2rem;
     }
+
+    .banner-card {
+        margin: 1.5rem;
+        padding: 0 2rem;
+    }
+
+    .banner-illustration {
+        margin-left: auto;
+    }
+
+    .banner-illustration img {
+        width: 100%;
+        max-width: 25rem;
+        margin-right: 3rem;
+    }
+
     
 }

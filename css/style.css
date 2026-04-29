@@ -12,8 +12,8 @@
 
   --font-main: 'Inter', sans-serif;
 
-  --sidebar-width: 240px;
-  --sidebar-collapsed: 100px;
+  --sidebar-width: 15vw;
+  --sidebar-collapsed: 12vw;
   --bottom-nav-height: 64px;
 }
 

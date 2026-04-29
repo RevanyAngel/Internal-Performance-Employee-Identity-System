@@ -1,16 +1,8 @@
-/* ---- Bottom Nav pada mobile ---- */
-.container-bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: blue;
-}
-
+/* ----BOTTOM NAVIGATION (MOBILE)---- */
 .bottom-nav {
     position: fixed;
     bottom: 18px;
     right: 5%;
-    /* right: 18px; */
     z-index: 100;
     width: 90%;
     height: 70px;
@@ -57,8 +49,6 @@
 .bottom-nav ul li a .icon {
     position: relative;
     display: block;
-    /* font-size: 14px; */
-    /* color: var(--primary); */
     transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Animasi bounce halus */
     transform: translateY(-8px);
 }
@@ -135,6 +125,89 @@
     border-radius: 50%;
     box-shadow: inset 0px 4px 6px rgba(0,0,0,0.1); /* Efek depth tipis */
 }
+
+/* ================== HEADER MOBILE ================== */
+.top-header {
+  height: 10vh;
+  width: 100vw;
+  background-color: var(--white);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo-mobile {
+    display: flex;
+    margin-right: auto;
+}
+
+.top-header .logo-mobile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-mobile .tulisan {
+    width: 110px;
+}
+
+.logo-mobile .educativa {
+    width: 35px;
+}
+
+.top-header h1 {
+    display: none;
+}
+
+.header-actions {
+    display: flex;
+    gap: 16px;
+}
+
+.header-actions img {
+    width: 25px;
+}
+
+.date-badge img {
+    background-color: var(--primary);
+    width: 28px;
+    padding: 5px;
+    border-radius: 7px;
+}
+
+.filter-text {
+    display: none;
+}
+
+/* ---ISI KONTEN DASHBOARD---- */
+/* ---Banner Dashboard---- */
+.banner-card {
+  background: linear-gradient(135deg, #ffffff 60%, var(--primary-bg) 100%);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+  border: 1px solid var(--border-color);
+}
+
+.banner-content h2 { color: var(--primary); font-size: 22px; margin-bottom: 8px; }
+.banner-content p  { color: var(--text-gray); font-size: 15px; }
+
+.banner-illustration img {
+    width: 100%;
+    max-width: 500px;
+    padding-right: 2rem;
+  }
+
 
 /* ================= TABLET — min-width: 768px ================= */
 @media (min-width: 768px) {
@@ -227,12 +300,56 @@
     }
 
     .bottom-nav { display: none; }
+
+
+    /* ================== HEADER TABLET ================== */
+    .top-header {
+        width: 88vw;
+        height: 9vh;
+        margin-left: auto;
+        padding: 0 26px;
+    }
+
+    .top-header h1 {
+        display: block;
+        color: var(--primary);
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .header .logo-mobile {
+        display: none;
+    }
+
+    .header-actions {
+        margin-left: auto;
+    }
+
+    .header-actions img {
+        width: 28px;
+    }
+
+    .date-badge {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background-color: var(--primary);
+        padding: 3px 18px;
+        border-radius: 7px;
+    }
+
+    .filter-text {
+        display: flex;
+        color: var(--white);
+        font-size: 14px;
+        font-weight: 600;
+    }
+
 }
 
 /* ================= DESKTOP — min-width: 1024px ================= */
 @media (min-width: 1024px) {
-    /*---- sidebar ----*/
-
+    /*---- SIDEBAR ----*/
     .sidebar-header {
         gap: 0;
         transform: translateY(-10%);
@@ -269,9 +386,9 @@
         font-weight: 700;
     }
 
-    /* .sidebar-component.active, .sidebar-component:hover {
-        color: var(--white);
-    } */
+    .sidebar-component .icon img {
+        width: 20px;
+    }
 
     .sidebar-nav .nav-item .text {
         display: flex;
@@ -323,6 +440,17 @@
     .logout-btn img {
         width: 20px;
         margin: 5px;
+    }
+
+    /* ================== HEADER DESKTOP ================== */
+    .top-header {
+        width: 85vw;
+        height: 10vh;
+        padding: 0 35px;
+    }
+
+    .top-header h1 {
+        font-size: 1.2rem;
     }
     
 }

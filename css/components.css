@@ -185,6 +185,8 @@
 }
 
 /* =========== ISI KONTEN DASHBOARD MOBILE ===========  */
+
+
 /* ---Banner Dashboard---- */
 .banner-card {
   background: 
@@ -221,6 +223,146 @@
     width: 100%;
     max-width: 300px;
 }
+
+/* ---- Stats Grid ---- */
+.stats-grid {
+    
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr; */
+  display: flex;
+  justify-content: center;
+  gap: .3rem;
+  margin: 0;
+}
+
+.stat-card {
+  padding: 1.3rem 1.3rem .5rem 1.3rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 128, 128, 0.2);
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  align-items: center;
+  background: 
+    radial-gradient(circle at 20% -20%, rgba(0, 128, 128, 0.1), transparent 10%),
+    radial-gradient(circle at 100% 80%, rgba(0, 128, 128, 0.15), transparent 40%),
+    radial-gradient(circle at 40% 170%, rgba(0, 128, 128, 0.3), transparent 50%);
+}
+
+.stat-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.stat-header h3 { 
+    font-size: .85rem; 
+    color: var(--primary); 
+    display: flex;
+    transform: translateY(-50%);
+}
+
+.badge { 
+    padding: .3rem 1rem; 
+    border-radius: 12px; 
+    font-size: .5rem; 
+    font-weight: 600; 
+}
+
+.attendance {
+    font-size: .55rem;
+    padding: 0;
+    width: 20vw;
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .25rem;
+}
+
+.badge-primary { 
+    background: var(--primary); 
+    color: var(--white); 
+}
+
+.badge-outline { 
+    border: 1px solid var(--primary); 
+    color: var(--primary); 
+}
+
+.stat-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-body h2 { 
+    font-size: 2rem; 
+    color: var(--primary); 
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+    transform: translateY(-20%);
+}
+
+.stat-body h2 span  { 
+    font-size: .8rem; 
+    color: var(--black); 
+    font-weight: 700;
+}
+
+.countdown-body h2  { 
+    font-size: 32px; 
+    text-align: center; 
+}
+
+.countdown-body p   { 
+    text-align: center; 
+    font-size: .5rem; 
+    color: var(--black); 
+    margin-top: -.4rem;
+}
+
+.countdown-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    transform: translateY(-30%);
+}
+
+.countdown-detail span {
+    font-weight: 700;
+    font-size: .8rem;
+}
+
+.countdown-detail p {
+        font-size: .5rem;
+}
+
+.read-more { 
+    font-size: .5rem; 
+    color: var(--text-gray); 
+    justify-self: flex-end;
+    margin-left: auto;
+    /* align-self: flex-end;  */
+    /* margin-top: auto;  */
+    /* padding-top: 16px;  */
+}
+
+.date-info { 
+    text-align: center; 
+    font-size: .6rem; 
+    color: var(--black); 
+    margin-top: 16px; 
+    border: 1px solid var(--primary); 
+    padding: 4px; border-radius: 12px; 
+    width: 22vw;
+    transform: translateY(-40%);    
+}
+
 
 
 
@@ -376,6 +518,32 @@
         font-size: 1.2rem;
     }
 
+    /* ====== Komponen Tengah Tablet ====== */
+    .stats-grid {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .stat-card {
+        width: 25vw;
+        padding: 1.5rem 0 .7rem 0;
+    }
+
+    .stat-body h2 {
+        font-size: 2.5rem;
+    }
+
+    .attendance {
+        font: 3rem;
+        width: 12vw;
+        height: 2.5vh;
+    }
+
+    .date-info {
+        width: 13vw;
+    }
+
 }
 
 /* ================= DESKTOP — min-width: 1024px ================= */
@@ -486,6 +654,8 @@
         font-size: 1.2rem;
     }
 
+    /* ================== BANNER DESKTOP ================== */
+
     .banner-card {
         margin: 1.5rem;
         padding: 0 2rem;
@@ -501,5 +671,71 @@
         margin-right: 3rem;
     }
 
+    /* ================== KOMPONEN TENGAH DESKTOP ================== */
+    .stats-grid {
+        display: flex;
+        justify-content: center;
+        gap: 1.8rem;
+    }
     
+    .stat-card {
+        width: 25.5vw;
+        height: 20vh;
+        padding: 1.5rem 0 0 0;
+    }
+
+    .stat-header {
+        flex-direction: row;
+        margin-bottom: .7rem;
+        gap: 2rem;
+    }
+
+    .stat-header h3 {
+        font-size: 1.5rem;
+        transform: translateY(0);
+        margin-bottom: .5rem;
+    }
+
+    .badge {
+        font-size: .7rem;
+        transform: translateY(-15%);
+    }
+
+    .attendance {
+        width: 8vw;
+        height: 3vh;
+    }
+
+    .wrapper-countdown {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .countdown-body {
+        display: flex;
+        /* flex-direction: column; */
+    }
+
+    .countdown-body h2 {
+        text-align: left;
+    }
+
+    .countdown-detail {
+        transform: translateY(-170%);
+        margin-left: 2rem;
+    }
+
+    .read-more {
+        display: flex;
+        transform: translateY(-300%);
+    }
+
+    .date-info {
+        width: 8vw;
+        margin: 0 0 0 3rem;
+        font-size: .8rem;
+    }
+
+
 }

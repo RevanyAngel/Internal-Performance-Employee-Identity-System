@@ -34,3 +34,9 @@ body {
 
 a { text-decoration: none; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+.bottom-nav.no-transition,
+.bottom-nav.no-transition .indicator,
+.bottom-nav.no-transition ul {
+    transition: none !important;
+}

@@ -511,7 +511,140 @@
   100% { background-position: -200% 0; }
 }
 
+/* ==================== HALAMAN KPI TRACKER ==================== */
+.performance-card {
+    /* width: 380px; */
+    background: var(--primary);
+    /* background: linear-gradient(135deg, #008080 0%, #046e6a 100%); */
+    border-radius: 20px;
+    border: 4px solid #40B5B5;
+    padding: 30px;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    margin: 1.5rem;
+    margin-bottom: 15rem;
+}
 
+/* Efek Dekorasi Lingkaran di Background */
+.performance-card::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    bottom: -150px;
+    right: -180px;
+    z-index: 0;
+}
+
+.performance-header p {
+    display: none;
+}
+
+.header-badge {
+    background: var(--secondary-color);
+    color: var(--text-gray);
+    padding: 8px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: .5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.performance-card h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 0 .7rem 0;
+}
+
+.performance-header {
+    order: 1;
+}
+
+.chart-wrapper {
+    transform: translateY(-30%);
+    order: 2;
+}
+
+.performance-button {
+    order: 3;
+    transform: translateY(330%);
+}
+
+
+
+/* Chart Section */
+.chart-container {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto .4rem;
+}
+
+.chart-value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 42px;
+    font-weight: 800;
+}
+
+/* Badge Excellence */
+.status-badge {
+    background: white;
+    color: var(--primary);
+    padding: .4rem 1.8rem;
+    border-radius: 25px;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 800;
+    font-size: 14px;
+    gap: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.status-badge img {
+    width: 1rem;
+}
+
+.status-badge p {
+    font-weight: 800;
+}
+
+.range-text {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/* Tombol Download */
+.btn-download {
+    margin-top: 1rem;
+    width: 100%;
+    padding: .4rem 1.2rem;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.6);
+    border-radius: 20px;
+    color: white;
+    font-weight: 500;
+    font-size: .7rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: white;
+}
 
 
 
@@ -734,6 +867,58 @@
         margin: 2rem;
     }
 
+    /* ==================== HALAMAN KPI TABLET ==================== */
+    .performance-card {
+        display: flex;
+    }
+    
+    .performance-header {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    .performance-header h2 {
+        font-size: 1.8rem;
+        text-align: start;
+    }
+
+    .performance-header p {
+        display: flex;
+        text-align: start;
+        font-size: .9rem;
+        padding-right: 1rem;
+    }
+
+    .chart-container {
+        width: 25vw;
+    }
+
+    .chart-wrapper {
+        order: 3;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        transform: translateY(0);
+    }
+
+    .performance-button {
+        display: flex;
+        order: 2;
+        transform: translateY(50%);
+        gap: 1rem;
+    }
+
+    .btn-download {
+        width: 38%;
+        padding: .6rem 0;
+        transform: translateY(-50%);
+    }
+
+    .status-badge {
+        padding: 1rem;
+        height: 3vh;
+    }
 }
 
 /* ================= DESKTOP — min-width: 1024px ================= */
@@ -871,7 +1056,7 @@
     .stat-card {
         width: 25.5vw;
         height: 20vh;
-        padding: 1.5rem 0 0 0;
+        padding: .8rem 0 1.5rem 0;
     }
 
     .stat-header {
@@ -930,6 +1115,36 @@
     /* ====== Mentor Note Desktop ====== */
     .mentor-text p {
         font-size: .8rem;
+    }
+
+    /* ==================== HALAMAN KPI DESKTOP ==================== */
+    .performance-card {
+        padding: 3.5rem;
+    }
+    
+    .performance-left {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+    
+    .performance-header p {
+        font-size: 1.2rem;
+        margin-right: 2rem;
+    }
+
+    .header-badge {
+        font-size: 1rem;
+    }
+
+    .status-badge p {
+        font-size: 1rem;
+    }
+    
+    .btn-download {
+        padding: .5rem 0;
+        width: 30%;
+        font-size: 1rem;
     }
 
 

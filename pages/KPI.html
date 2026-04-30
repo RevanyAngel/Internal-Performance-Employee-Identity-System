@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>educativa.id — Dashboard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+  <div class="app-container">
+    
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo-icon">
+            <img class="educativa" src="../assets/icons/logo-ducativa.png">
+            <img class="tulisan" src="../assets/icons/logo-tulisan-educativa.png">
+        </div>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <ul class="nav-list">
+          <li class="list nav-item" data-index="0">
+              <a class="sidebar-component" href="../index.html">
+                  <span class="icon"><img src="../assets/icons/nav-dashboard.png" data-active="../assets/icons/nav-dashboard-active.png" data-inactive="../assets/icons/nav-dashboard.png"></span>
+                  <span class="text">Dashboard</span>
+              </a>
+          </li>
+          <li class="list active nav-item" data-index="1">
+              <a class="sidebar-component" href="#">
+                  <span class="icon"><img src="../assets/icons/nav-KPI-active.png" data-active="../assets/icons/nav-kpi-active.png" data-inactive="../assets/icons/nav-kpi.png"></span>
+                  <span class="text">KPI Tracker</span>
+              </a>
+          </li>
+          <li class="list nav-item" data-index="2">
+              <a class="sidebar-component" href="#">
+                  <span class="icon"><img src="../assets/icons/nav-attendance.png" data-active="../assets/icons/nav-attendance-active.png" data-inactive="../assets/icons/nav-attendance.png"></span>
+                  <span class="text">Attendance</span>
+              </a>
+          </li>
+          <li class="list nav-item" data-index="3">
+              <a class="sidebar-component" href="#">
+                  <span class="icon"><img src="../assets/icons/nav-profile.png" data-active="../assets/icons/nav-profile-active.png" data-inactive="../assets/icons/nav-profile.png"></span>
+                  <span class="text">Profile</span>
+              </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-profile">
+          <img src="../assets/icons/avatar-1.png" alt="User" class="avatar">
+          <div class="user-info">
+            <h4>Herlina Adinda</h4>
+            <p>Graphic Design</p>
+          </div>
+          <button class="logout-btn"><img src="../assets/icons/logout.png" alt="Logout"></button>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main-wrapper">
+      <Aside class="header">
+        <header class="top-header">
+          <div class="logo-mobile">
+              <img class="educativa" src="../assets/icons/logo-ducativa.png">
+              <img class="tulisan" src="../assets/icons/logo-tulisan-educativa.png">
+          </div>
+          <h1 class="page-title">Performance System</h1>
+          <div class="header-actions">
+            <button class="action-btn"><img src="../assets/icons/header-notification.png"></button>
+            <button class="action-btn"><img src="../assets/icons/header-calendar.png"></button>
+            <button class="date-badge">
+              <p class="filter-text">March 2026</p>
+              <img class="filter-icon" src="../assets/icons/header-filter.png">
+            </button>
+          </div>
+        </header>
+      </Aside>
+
+      <main class="main-content">
+        <div class="page-wrapper">
+            <div class="performance-card">
+                <div class="performance-left">
+                    <div class="performance-header">
+                        <div class="header-badge">Monthly Performance Review</div>
+                        <h2>Academic Excellence Score</h2>
+                        <p>Your performance metrics for March 2026 show consistent growth across all architectural standards. Excellent alignment with the Educativa.id core values.</p>
+                    </div>
+                    <div class="performance-button">
+                        <div class="status-badge">
+                            <img src="../assets/icons/badge-excellent.png" alt="Status Icon">
+                            <p>EXCELLENT</p>
+                        </div>
+                        <button class="btn-download">Download Report</button>
+                    </div>
+                </div>
+
+                <div class="chart-wrapper">
+                    <div class="chart-container">
+                        <canvas id="scoreChart"></canvas>
+                        <div class="chart-value">910</div>
+                    </div>
+                    <span class="range-text">(Based on 801-1000)</span>
+                </div>
+                
+            </div>
+        </div>
+      </main>
+    </div>
+    <nav class="container-bottom">
+      <div class="bottom-nav">
+        <ul>
+          <li class="list" data-index="0">
+              <a href="../index.html">
+                  <span class="icon"><img src="../assets/icons/nav-dashboard.png" data-active="../assets/icons/nav-dashboard-active.png" data-inactive="../assets/icons/nav-dashboard.png"></span>
+                  <span class="text">Dashboard</span>
+              </a>
+          </li>
+          <li class="list active" data-index="1">
+              <a href="KPI.html">
+                  <span class="icon"><img src="../assets/icons/nav-KPI-active.png" data-active="../assets/icons/nav-kpi-active.png" data-inactive="../assets/icons/nav-kpi.png"></span>
+                  <span class="text">KPI Tracker</span>
+              </a>
+          </li>
+          <li class="list" data-index="2">
+              <a href="#">
+                  <span class="icon"><img src="../assets/icons/nav-attendance.png" data-active="../assets/icons/nav-attendance-active.png" data-inactive="../assets/icons/nav-attendance.png"></span>
+                  <span class="text">Attendance</span>
+              </a>
+          </li>
+          <li class="list" data-index="3">
+              <a href="#">
+                  <span class="icon"><img src="../assets/icons/nav-profile.png" data-active="../assets/icons/nav-profile-active.png" data-inactive="../assets/icons/nav-profile.png"></span>
+                  <span class="text">Profile</span>
+              </a>
+          </li>
+          
+          <div class="indicator">
+              <div class="indicator-inner"></div>
+          </div>
+        </ul>
+      </div>
+
+    </nav>
+  </div>
+
+
+  <script src="../js/data.js"></script>
+  <script src="../js/dashboard.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/KPI.js"></script>
+
+</body>
+</html>

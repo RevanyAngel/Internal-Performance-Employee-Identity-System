@@ -425,6 +425,66 @@
   border-radius: 5px;
 }
 
+/* ---- Mentor Note ---- */
+.mentor-note-card {
+  background: var(--white);
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+  border: 1px solid var(--border-color);
+  margin-bottom: 8rem;
+}
+
+.mentor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.mentor-header h3 { 
+    color: var(--primary); 
+    font-size: 16px; 
+}
+
+.see-other { 
+    color: var(--primary); 
+    font-weight: 600; 
+    font-size: 14px; 
+}
+
+.mentor-body {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.mentor-body img {
+    align-self: baseline;
+}
+
+.mentor-avatar { 
+    width: 64px; 
+    height: 64px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+.mentor-text h4 { 
+    color: var(--black); 
+    margin-bottom: 4px; 
+    font-weight: 700;
+    font-size: .8rem;
+}
+
+.mentor-text p  { 
+    color: var(--black); 
+    font-size: .6rem; 
+    line-height: 1.6; 
+    font-weight: 400;
+}
+
 
 
 
@@ -643,6 +703,11 @@
         max-width: 100%;
     }
 
+    /* ====== Mentor Note Tablet ====== */
+    .mentor-note-card {
+        margin: 2rem;
+    }
+
 }
 
 /* ================= DESKTOP — min-width: 1024px ================= */
@@ -833,6 +898,11 @@
     .date-info {
         width: 8vw;
         margin: 0 0 0 3rem;
+        font-size: .8rem;
+    }
+
+    /* ====== Mentor Note Desktop ====== */
+    .mentor-text p {
         font-size: .8rem;
     }
 

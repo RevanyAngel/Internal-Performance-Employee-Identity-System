@@ -485,6 +485,32 @@
     font-weight: 400;
 }
 
+/* ---- Skeleton Animation ---- */
+.skeleton-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-box::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(90deg, #e8f3f4 25%, #cbe4e5 50%, #e8f3f4 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  z-index: 10;
+  border-radius: inherit;
+}
+
+.skeleton-box.loaded::before { display: none; }
+.hide-on-load { opacity: 0; }
+.skeleton-box.loaded .hide-on-load { opacity: 1; transition: opacity 0.5s ease-in; }
+
+@keyframes loading {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
 
 
 

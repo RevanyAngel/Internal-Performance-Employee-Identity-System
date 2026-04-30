@@ -88,7 +88,7 @@
       </Aside>
 
       <main class="main-content">
-        <div class="page-wrapper">
+        <section class="page-wrapper">
             <div class="performance-card">
                 <div class="performance-left">
                     <div class="performance-header">
@@ -112,9 +112,107 @@
                     </div>
                     <span class="range-text">(Based on 801-1000)</span>
                 </div>
-                
             </div>
-        </div>
+        </section>
+        <section class="kpi-section">
+            <h1 class="kpi-title">KPI Indikators Section</h1>
+            
+            <div class="kpi-grid">
+                
+                <div class="kpi-card">
+                    <div class="card-header">
+                        <div class="icon-box"><img src="../assets/icons/KPI-design.png"></div>
+                        <h2>Design Output</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-info">
+                            <div>
+                                <p class="info-label">Weight :</p>
+                                <p class="info-value">450</p>
+                            </div>
+                            <div>
+                                <p class="info-label">Status :</p>
+                                <p class="info-status">2 Design Ready</p>
+                            </div>
+                        </div>
+                        <div class="card-chart">
+                            <canvas id="chartDesign"></canvas>
+                            <div class="chart-center-text">100%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="card-header">
+                        <div class="icon-box"><img src="../assets/icons/KPI-brand.png"></i></div>
+                        <h2>Brand Consistency</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-info">
+                            <div>
+                                <p class="info-label">Weight :</p>
+                                <p class="info-value">180</p>
+                            </div>
+                            <div>
+                                <p class="info-label">Target :</p>
+                                <p class="info-status">90% Target Met!</p>
+                            </div>
+                        </div>
+                        <div class="card-chart">
+                            <canvas id="chartBrand"></canvas>
+                            <div class="chart-center-text">90%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="card-header">
+                        <div class="icon-box"><img src="../assets/icons/KPI-technical.png"></div>
+                        <h2>Technical Accuracy</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-info">
+                            <div>
+                                <p class="info-label">Weight :</p>
+                                <p class="info-value">200</p>
+                            </div>
+                            <div>
+                                <p class="info-label">Status :</p>
+                                <p class="info-status">85% Optimal!</p>
+                            </div>
+                        </div>
+                        <div class="card-chart">
+                            <canvas id="chartTechnical"></canvas>
+                            <div class="chart-center-text">85%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="card-header">
+                        <div class="icon-box"><img src="../assets/icons/KPI-deadline.png"></div>
+                        <h2>Deadline Discipline</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-info">
+                            <div>
+                                <p class="info-label">Weight :</p>
+                                <p class="info-value">170</p>
+                            </div>
+                            <div>
+                                <p class="info-label">Target :</p>
+                                <p class="info-status">90% Punctual!</p>
+                            </div>
+                        </div>
+                        <div class="card-chart">
+                            <canvas id="chartDeadline"></canvas>
+                            <div class="chart-center-text">90%</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
       </main>
     </div>
     <nav class="container-bottom">

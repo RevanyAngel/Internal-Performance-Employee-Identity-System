@@ -1,3 +1,5 @@
+
+// =============== Monthly Performance Review ===============
 const ctx = document.getElementById('scoreChart').getContext('2d');
     
     // Konfigurasi Chart.js
@@ -30,3 +32,47 @@ const ctx = document.getElementById('scoreChart').getContext('2d');
             }
         }
     });
+
+
+// =============== KPI Indicators ===============
+// Konfigurasi umum untuk semua chart
+        const commonOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '75%', // Ketebalan garis doughnut
+            plugins: {
+                tooltip: { enabled: false }, // Sembunyikan tooltip saat di-hover
+                legend: { display: false }   // Sembunyikan legenda
+            },
+            animation: {
+                animateScale: true,
+                animateRotate: true
+            }
+        };
+
+        // Warna yang digunakan di grafik
+        const colorFilled = '#0b7c71'; // Warna Teal (terisi)
+        const colorEmpty = '#d4e7e4';  // Warna abu-abu kehijauan (kosong)
+
+        // Fungsi pembuat chart
+        function createKpiChart(elementId, percentage) {
+            const ctx = document.getElementById(elementId).getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    datasets: [{
+                        data: [percentage, 100 - percentage],
+                        backgroundColor: [colorFilled, colorEmpty],
+                        borderWidth: 0,
+                        borderRadius: 2 // Membuat ujung bar sedikit membulat (opsional)
+                    }]
+                },
+                options: commonOptions
+            });
+        }
+
+        // Inisialisasi ke-4 chart sesuai dengan persentase di gambar
+        createKpiChart('chartDesign', 100);
+        createKpiChart('chartBrand', 90);
+        createKpiChart('chartTechnical', 85);
+        createKpiChart('chartDeadline', 90);

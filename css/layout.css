@@ -24,24 +24,14 @@
   flex-direction: column;
 }
 
-/* === HEADER ==== */
-/* .header {
-  display: flex;
-  flex: 1;
-  width: 100%;
-  background-color: var(--white);
-  border-bottom: 1px solid var(--border-color);
-} */
-
-/* ==== MAIN CONTENT ==== */
-/* .main-content {
-  flex: 1;
-  width: 100%;
-  margin-left: 0;
-  display: flex;
-  flex-direction: column;
-  background-color: blue;
-} */
+/* ----- KPI Mobile ----- */
+.kpi-section {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
 
 
 /* ================= TABLET — min-width: 768px ================= */
@@ -64,8 +54,6 @@
     width: 88vw;
     margin-left: auto;
   }
-
-
 
 }
 

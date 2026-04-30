@@ -89,14 +89,14 @@
 
       <main class="main-content">
         <section class="page-wrapper">
-            <div class="performance-card">
+            <div class="performance-card skeleton-box">
                 <div class="performance-left">
-                    <div class="performance-header">
+                    <div class="performance-header hide-on-load">
                         <div class="header-badge">Monthly Performance Review</div>
                         <h2>Academic Excellence Score</h2>
                         <p>Your performance metrics for March 2026 show consistent growth across all architectural standards. Excellent alignment with the Educativa.id core values.</p>
                     </div>
-                    <div class="performance-button">
+                    <div class="performance-button hide-on-load">
                         <div class="status-badge">
                             <img src="../assets/icons/badge-excellent.png" alt="Status Icon">
                             <p>EXCELLENT</p>
@@ -105,7 +105,7 @@
                     </div>
                 </div>
 
-                <div class="chart-wrapper">
+                <div class="chart-wrapper hide-on-load">
                     <div class="chart-container">
                         <canvas id="scoreChart"></canvas>
                         <div class="chart-value">910</div>
@@ -115,17 +115,17 @@
             </div>
         </section>
         <section class="kpi-section">
-            <h1 class="kpi-title">KPI Indikators Section</h1>
+            <h1 class="kpi-title hide-on-load">KPI Indikators Section</h1>
             
             <div class="kpi-grid">
                 
-                <div class="kpi-card">
-                    <div class="card-header">
+                <div class="kpi-card skeleton-box">
+                    <div class="card-header hide-on-load">
                         <div class="icon-box"><img src="../assets/icons/KPI-design.png"></div>
                         <h2>Design Output</h2>
                     </div>
                     <div class="card-body">
-                        <div class="card-info">
+                        <div class="card-info hide-on-load">
                             <div>
                                 <p class="info-label">Weight :</p>
                                 <p class="info-value">450</p>
@@ -135,20 +135,20 @@
                                 <p class="info-status">2 Design Ready</p>
                             </div>
                         </div>
-                        <div class="card-chart">
+                        <div class="card-chart hide-on-load">
                             <canvas id="chartDesign"></canvas>
                             <div class="chart-center-text">100%</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="kpi-card">
-                    <div class="card-header">
+                <div class="kpi-card skeleton-box">
+                    <div class="card-header hide-on-load">
                         <div class="icon-box"><img src="../assets/icons/KPI-brand.png"></i></div>
                         <h2>Brand Consistency</h2>
                     </div>
                     <div class="card-body">
-                        <div class="card-info">
+                        <div class="card-info hide-on-load">
                             <div>
                                 <p class="info-label">Weight :</p>
                                 <p class="info-value">180</p>
@@ -158,20 +158,20 @@
                                 <p class="info-status">90% Target Met!</p>
                             </div>
                         </div>
-                        <div class="card-chart">
+                        <div class="card-chart hide-on-load">
                             <canvas id="chartBrand"></canvas>
                             <div class="chart-center-text">90%</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="kpi-card">
-                    <div class="card-header">
+                <div class="kpi-card skeleton-box">
+                    <div class="card-header hide-on-load">
                         <div class="icon-box"><img src="../assets/icons/KPI-technical.png"></div>
                         <h2>Technical Accuracy</h2>
                     </div>
                     <div class="card-body">
-                        <div class="card-info">
+                        <div class="card-info hide-on-load">
                             <div>
                                 <p class="info-label">Weight :</p>
                                 <p class="info-value">200</p>
@@ -181,20 +181,20 @@
                                 <p class="info-status">85% Optimal!</p>
                             </div>
                         </div>
-                        <div class="card-chart">
+                        <div class="card-chart hide-on-load">
                             <canvas id="chartTechnical"></canvas>
                             <div class="chart-center-text">85%</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="kpi-card">
-                    <div class="card-header">
+                <div class="kpi-card skeleton-box">
+                    <div class="card-header hide-on-load">
                         <div class="icon-box"><img src="../assets/icons/KPI-deadline.png"></div>
                         <h2>Deadline Discipline</h2>
                     </div>
                     <div class="card-body">
-                        <div class="card-info">
+                        <div class="card-info hide-on-load">
                             <div>
                                 <p class="info-label">Weight :</p>
                                 <p class="info-value">170</p>
@@ -204,13 +204,29 @@
                                 <p class="info-status">90% Punctual!</p>
                             </div>
                         </div>
-                        <div class="card-chart">
+                        <div class="card-chart hide-on-load">
                             <canvas id="chartDeadline"></canvas>
                             <div class="chart-center-text">90%</div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="kpi-dashboard-widget-container">
+            <div class="kpi-historical-card-wrapper skeleton-box">
+                <!-- Header Section -->
+                <div class="kpi-card-header-section hide-on-load">
+                    <h2 class="kpi-card-main-title">Historical KPI Score</h2>
+                    <div class="kpi-card-tab-controls">
+                        <button class="kpi-tab-button kpi-tab-active" id="kpi-btn-monthly">MONTHLY</button>
+                        <button class="kpi-tab-button" id="kpi-btn-weekly">WEEKLY</button>
+                    </div>
+                </div>
 
+                <!-- Chart Section -->
+                <div class="kpi-chart-canvas-container hide-on-load">
+                    <canvas id="kpi-historical-line-chart"></canvas>
+                </div>
             </div>
         </section>
       </main>

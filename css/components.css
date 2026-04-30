@@ -511,6 +511,34 @@
   100% { background-position: -200% 0; }
 }
 
+/* ---- Skeleton untuk Performance Card (Background Hijau Gelap) ---- */
+.performance-card.skeleton-box {
+  overflow: hidden;
+}
+
+/* Gunakan ::after untuk skeleton agar tidak menimpa ::before asli (lingkaran) */
+.performance-card.skeleton-box::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(90deg, #3a9e9e 25%, #5fcbcb 50%, #3a9e9e 75%);
+  background-size: 200% 100%;
+  animation: skeletonShimmer 1.5s infinite;
+  z-index: 10;
+  border-radius: inherit;
+}
+
+/* Animasi shimmer khusus untuk background hijau */
+@keyframes skeletonShimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Saat loaded, sembunyikan skeleton */
+.performance-card.skeleton-box.loaded::after {
+  display: none;
+}
+
 /* ==================== HALAMAN KPI TRACKER ==================== */
 .performance-card {
     /* width: 380px; */
@@ -528,7 +556,7 @@
     margin-bottom: 2rem;
 }
 
-/* Efek Dekorasi Lingkaran di Background */
+/* Efek Dekorasi Lingkaran di Background - disembunyikan saat skeleton */
 .performance-card::before {
     content: "";
     position: absolute;
@@ -539,6 +567,12 @@
     bottom: -150px;
     right: -180px;
     z-index: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Saat skeleton aktif, sembunyikan lingkaran dekorasi */
+.performance-card.skeleton-box:not(.loaded)::before {
+  opacity: 0;
 }
 
 .performance-header p {
@@ -660,11 +694,15 @@
     gap: .5rem;
     max-width: 100%;
     box-sizing: border-box;
-    margin-bottom: 10rem;
+    margin-bottom: .7rem;
 }
 
 .kpi-card {
-    background-color: #f3faf8;
+    background-color: var(--white);
+    background: 
+        radial-gradient(circle at 20% -20%, rgba(0, 128, 128, 0.1), transparent 10%),
+        radial-gradient(circle at 100% 80%, rgba(0, 128, 128, 0.15), transparent 40%),
+        radial-gradient(circle at 40% 170%, rgba(0, 128, 128, 0.3), transparent 50%);
     border: 4px solid rgba(0, 128, 128, 0.1);
     border-radius: 25px;
     padding: 1rem;
@@ -751,6 +789,74 @@
     font-size: .7rem;
     font-weight: 700;
     color: var(--primary);
+}
+
+/* -------------------- Historical KPI Score -------------------- */
+
+/* Card pembungkus grafik */
+.kpi-historical-card-wrapper {
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 35px 40px;
+    box-shadow: 0 10px 40px rgba(0, 136, 140, 0.06);
+    border: 2px solid rgba(0, 128, 128, 0.1); /* Border tipis kehijauan */
+}
+
+/* Header card (Judul dan Tab) */
+.kpi-card-header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Judul card */
+.kpi-card-main-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #057d81; /* Warna hijau teal gelap */
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+/* Navigasi tab (Monthly / Weekly) */
+.kpi-card-tab-controls {
+    display: flex;
+    gap: .8rem;
+}
+
+.kpi-tab-button {
+    background: none;
+    border: none;
+    font-size: .7rem;
+    font-weight: 700;
+    color: #2b3035;
+    cursor: pointer;
+    padding: 0 0 8px 0;
+    position: relative;
+}
+
+/* Style untuk tab yang aktif */
+.kpi-tab-button.kpi-tab-active {
+    color: #057d81;
+}
+
+.kpi-tab-button.kpi-tab-active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #057d81;
+    border-radius: 2px;
+}
+
+/* Container canvas untuk Chart.js */
+.kpi-chart-canvas-container {
+    position: relative;
+    height: 350px;
+    width: 100%;
 }
 
 
@@ -1031,7 +1137,7 @@
         height: 3vh;
     }
 
-    /* ====== KPI Grid Tablet ====== */
+    /* ====== KPI Performance Grid Tablet ====== */
     .kpi-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
@@ -1109,6 +1215,7 @@
     .sidebar-footer {
         background-color: var(--white);
         border: none;
+        margin-bottom: 1rem;
     }
 
     .user-profile {
@@ -1286,6 +1393,7 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 24px;
         padding: 0 2rem;
+        margin-bottom: 0;
     }
 
     .card-info {
@@ -1298,4 +1406,7 @@
 
     }
 
+    .kpi-historical-card-wrapper {
+        margin: 2.2rem;
+    }
 }

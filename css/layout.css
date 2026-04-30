@@ -33,6 +33,14 @@
     overflow-x: hidden;
 }
 
+/* ------- Historical KPI Score ------- */
+.kpi-dashboard-widget-container {
+    width: 100%;
+    /* max-width: 80vw; */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 
 /* ================= TABLET — min-width: 768px ================= */
 @media (min-width: 768px) {

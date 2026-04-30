@@ -150,6 +150,40 @@
             </div>
           </section>
 
+          <section class="charts-grid">
+          <div class="chart-card skeleton-box area-chart-card">
+            <h3 class="hide-on-load">Monthly KPI Score vs Attendance Score</h3>
+            <div class="chart-container hide-on-load" style="position: relative; height:250px; width:100%">
+              <canvas id="areaChart"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card skeleton-box radar-chart-card">
+            <h3 class="hide-on-load">Evaluation Breakdown</h3>
+            <div class="wrapper-breakdown">
+              <div class="radar-container hide-on-load" style="position: relative; height:200px; width:100%; display: flex; justify-content: center;">
+                <canvas id="radarChart"></canvas>
+              </div>
+              
+              <div class="progress-breakdown hide-on-load">
+                <div class="progress-item">
+                  <div class="progress-label"><span>Initiative</span><span>80%</span></div>
+                  <div class="progress-track"><div class="progress-fill" style="width: 80%;"></div></div>
+                </div>
+                <div class="progress-item">
+                  <div class="progress-label"><span>Communication</span><span>70%</span></div>
+                  <div class="progress-track"><div class="progress-fill" style="width: 70%;"></div></div>
+                </div>
+                <div class="progress-item">
+                  <div class="progress-label"><span>Responsibility</span><span>90%</span></div>
+                  <div class="progress-track"><div class="progress-fill" style="width: 90%;"></div></div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </section>
+
         </div>
       </main>
     </div>
